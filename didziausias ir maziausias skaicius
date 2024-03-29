@@ -1,0 +1,29 @@
+
+int n = 0;
+int didz=0;
+int maz=100000;
+int sk = 0;
+
+Console.WriteLine("Iveskite kiek norite skaiciu: ");
+n = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 0; i < n; i++)
+{
+    Console.Write($"Iveskite {i + 1}-aji skaiciu: ");
+    sk = Convert.ToInt32(Console.ReadLine());
+
+    if (sk > didz)
+    {
+        didz = sk;
+    }
+    if (sk < maz)
+    {
+        maz = sk;
+    }
+}
+
+if (didz == maz)
+
+    Console.WriteLine("didziausias ir maziausias skaicius yra vienodi");
+
+else    Console.WriteLine($"Didziausias skaicius yra: {didz}, o maziausias yra: {maz}");
